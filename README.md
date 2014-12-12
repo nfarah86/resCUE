@@ -10,7 +10,7 @@
 
 ## Synopsis
 
-ResCUE is a platfrom in development to help you keep in touch when it matters most.
+resCUE is a platfrom in development to help you keep in touch when it matters most.
 
 This project was inspired while running and feeling endagendered by my surroundings. After texting some friends and letting them know where I was, I thought there had to be a safer way to leverage technology to solve this problem. 
 
