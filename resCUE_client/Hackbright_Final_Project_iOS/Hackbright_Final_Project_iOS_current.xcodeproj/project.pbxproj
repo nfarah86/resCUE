@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD0AD8941A1A7D8300F60E4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0AD8931A1A7D8300F60E4B /* Foundation.framework */; };
+		DD0AD8961A1A7D9400F60E4B /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0AD8951A1A7D9400F60E4B /* CoreBluetooth.framework */; };
+		DD0AD8981A1A7DA500F60E4B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0AD8971A1A7DA500F60E4B /* CoreLocation.framework */; };
+		DD4716F51A15600000C276D4 /* NFHLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4716F41A15600000C276D4 /* NFHLocationManager.m */; };
+		DD4717311A15604D00C276D4 /* AppMessagingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4716F91A15604D00C276D4 /* AppMessagingLayer.m */; };
+		DD4717321A15604D00C276D4 /* CBPeripheral+isConnected_Universal.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4716FD1A15604D00C276D4 /* CBPeripheral+isConnected_Universal.m */; };
+		DD4717331A15604D00C276D4 /* CBPeripheral+UniqueId.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4716FF1A15604D00C276D4 /* CBPeripheral+UniqueId.m */; };
+		DD4717341A15604D00C276D4 /* NSData+CRC.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4717011A15604D00C276D4 /* NSData+CRC.m */; };
+		DD4717351A15604D00C276D4 /* BEAN_Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4717041A15604D00C276D4 /* BEAN_Helper.m */; };
+		DD4717361A15604D00C276D4 /* PTDBEAN_Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4717061A15604D00C276D4 /* PTDBEAN_Helper.m */; };
+		DD4717371A15604D00C276D4 /* BatteryProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = DD47170A1A15604D00C276D4 /* BatteryProfile.m */; };
+		DD4717381A15604D00C276D4 /* BleProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = DD47170C1A15604D00C276D4 /* BleProfile.m */; };
+		DD4717391A15604D00C276D4 /* DevInfoProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = DD47170F1A15604D00C276D4 /* DevInfoProfile.m */; };
+		DD47173A1A15604D00C276D4 /* GattSerialProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4717121A15604D00C276D4 /* GattSerialProfile.m */; };
+		DD47173B1A15604D00C276D4 /* GattPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4717171A15604D00C276D4 /* GattPacket.m */; };
+		DD47173C1A15604D00C276D4 /* GattSerialMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4717191A15604D00C276D4 /* GattSerialMessage.m */; };
+		DD47173D1A15604D00C276D4 /* GattSerialMessageRxAssembler.m in Sources */ = {isa = PBXBuildFile; fileRef = DD47171B1A15604D00C276D4 /* GattSerialMessageRxAssembler.m */; };
+		DD47173E1A15604D00C276D4 /* GattSerialTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = DD47171D1A15604D00C276D4 /* GattSerialTransport.m */; };
+		DD47173F1A15604D00C276D4 /* GattTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = DD47171F1A15604D00C276D4 /* GattTransport.m */; };
+		DD4717401A15604D00C276D4 /* OadProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4717231A15604D00C276D4 /* OadProfile.m */; };
+		DD4717411A15604D00C276D4 /* PTDBleDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4717261A15604D00C276D4 /* PTDBleDevice.m */; };
+		DD4717421A15604D00C276D4 /* PTDBean.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4717281A15604D00C276D4 /* PTDBean.m */; };
+		DD4717431A15604D00C276D4 /* PTDBeanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD47172A1A15604D00C276D4 /* PTDBeanManager.m */; };
+		DD4717441A15604D00C276D4 /* PTDBeanRadioConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DD47172B1A15604D00C276D4 /* PTDBeanRadioConfig.m */; };
+		DD47174A1A1566F000C276D4 /* BeanDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4717491A1566F000C276D4 /* BeanDetailViewController.m */; };
+		DD62F2A51A1331870059F3DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD62F2A31A1331870059F3DB /* Main.storyboard */; };
+		DD62F2A71A1331870059F3DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD62F2A61A1331870059F3DB /* Images.xcassets */; };
+		DD62F2AA1A1331870059F3DB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD62F2A81A1331870059F3DB /* LaunchScreen.xib */; };
+		DD8576A11A155E9B00FE4C37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD62F29E1A1331870059F3DB /* AppDelegate.m */; };
+		DD8576A21A155E9B00FE4C37 /* NFHBeanListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD62F2A11A1331870059F3DB /* NFHBeanListViewController.m */; };
+		DD8576B71A155E9B00FE4C37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD62F29B1A1331870059F3DB /* main.m */; };
+		DDE529C01A21147600A902EC /* NFHWebServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE529BF1A21147600A902EC /* NFHWebServiceManager.m */; };
+		DDE529C31A23FD5E00A902EC /* NFHLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE529C21A23FD5E00A902EC /* NFHLogInViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DD0AD8931A1A7D8300F60E4B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DD0AD8951A1A7D9400F60E4B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		DD0AD8971A1A7DA500F60E4B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DD4716F31A15600000C276D4 /* NFHLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFHLocationManager.h; sourceTree = "<group>"; };
+		DD4716F41A15600000C276D4 /* NFHLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFHLocationManager.m; sourceTree = "<group>"; };
+		DD4716F81A15604D00C276D4 /* AppMessagingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppMessagingLayer.h; sourceTree = "<group>"; };
+		DD4716F91A15604D00C276D4 /* AppMessagingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppMessagingLayer.m; sourceTree = "<group>"; };
+		DD4716FA1A15604D00C276D4 /* BEAN_Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEAN_Globals.h; sourceTree = "<group>"; };
+		DD4716FC1A15604D00C276D4 /* CBPeripheral+isConnected_Universal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBPeripheral+isConnected_Universal.h"; sourceTree = "<group>"; };
+		DD4716FD1A15604D00C276D4 /* CBPeripheral+isConnected_Universal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBPeripheral+isConnected_Universal.m"; sourceTree = "<group>"; };
+		DD4716FE1A15604D00C276D4 /* CBPeripheral+UniqueId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBPeripheral+UniqueId.h"; sourceTree = "<group>"; };
+		DD4716FF1A15604D00C276D4 /* CBPeripheral+UniqueId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBPeripheral+UniqueId.m"; sourceTree = "<group>"; };
+		DD4717001A15604D00C276D4 /* NSData+CRC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CRC.h"; sourceTree = "<group>"; };
+		DD4717011A15604D00C276D4 /* NSData+CRC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CRC.m"; sourceTree = "<group>"; };
+		DD4717031A15604D00C276D4 /* BEAN_Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEAN_Helper.h; sourceTree = "<group>"; };
+		DD4717041A15604D00C276D4 /* BEAN_Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEAN_Helper.m; sourceTree = "<group>"; };
+		DD4717051A15604D00C276D4 /* PTDBEAN_Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTDBEAN_Helper.h; sourceTree = "<group>"; };
+		DD4717061A15604D00C276D4 /* PTDBEAN_Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTDBEAN_Helper.m; sourceTree = "<group>"; };
+		DD4717091A15604D00C276D4 /* BatteryProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatteryProfile.h; sourceTree = "<group>"; };
+		DD47170A1A15604D00C276D4 /* BatteryProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatteryProfile.m; sourceTree = "<group>"; };
+		DD47170B1A15604D00C276D4 /* BleProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BleProfile.h; sourceTree = "<group>"; };
+		DD47170C1A15604D00C276D4 /* BleProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BleProfile.m; sourceTree = "<group>"; };
+		DD47170E1A15604D00C276D4 /* DevInfoProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevInfoProfile.h; sourceTree = "<group>"; };
+		DD47170F1A15604D00C276D4 /* DevInfoProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevInfoProfile.m; sourceTree = "<group>"; };
+		DD4717111A15604D00C276D4 /* GattSerialProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GattSerialProfile.h; sourceTree = "<group>"; };
+		DD4717121A15604D00C276D4 /* GattSerialProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GattSerialProfile.m; sourceTree = "<group>"; };
+		DD4717141A15604D00C276D4 /* GattCharacteristicHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GattCharacteristicHandler.h; sourceTree = "<group>"; };
+		DD4717151A15604D00C276D4 /* GattCharacteristicObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GattCharacteristicObserver.h; sourceTree = "<group>"; };
+		DD4717161A15604D00C276D4 /* GattPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GattPacket.h; sourceTree = "<group>"; };
+		DD4717171A15604D00C276D4 /* GattPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GattPacket.m; sourceTree = "<group>"; };
+		DD4717181A15604D00C276D4 /* GattSerialMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GattSerialMessage.h; sourceTree = "<group>"; };
+		DD4717191A15604D00C276D4 /* GattSerialMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GattSerialMessage.m; sourceTree = "<group>"; };
+		DD47171A1A15604D00C276D4 /* GattSerialMessageRxAssembler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GattSerialMessageRxAssembler.h; sourceTree = "<group>"; };
+		DD47171B1A15604D00C276D4 /* GattSerialMessageRxAssembler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GattSerialMessageRxAssembler.m; sourceTree = "<group>"; };
+		DD47171C1A15604D00C276D4 /* GattSerialTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GattSerialTransport.h; sourceTree = "<group>"; };
+		DD47171D1A15604D00C276D4 /* GattSerialTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GattSerialTransport.m; sourceTree = "<group>"; };
+		DD47171E1A15604D00C276D4 /* GattTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GattTransport.h; sourceTree = "<group>"; };
+		DD47171F1A15604D00C276D4 /* GattTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GattTransport.m; sourceTree = "<group>"; };
+		DD4717211A15604D00C276D4 /* oad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oad.h; sourceTree = "<group>"; };
+		DD4717221A15604D00C276D4 /* OadProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OadProfile.h; sourceTree = "<group>"; };
+		DD4717231A15604D00C276D4 /* OadProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OadProfile.m; sourceTree = "<group>"; };
+		DD4717241A15604D00C276D4 /* Profile_Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile_Protocol.h; sourceTree = "<group>"; };
+		DD4717251A15604D00C276D4 /* ProfileDelegate_Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileDelegate_Protocol.h; sourceTree = "<group>"; };
+		DD4717261A15604D00C276D4 /* PTDBleDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTDBleDevice.m; sourceTree = "<group>"; };
+		DD4717271A15604D00C276D4 /* PTDBean+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PTDBean+Protected.h"; sourceTree = "<group>"; };
+		DD4717281A15604D00C276D4 /* PTDBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTDBean.m; sourceTree = "<group>"; };
+		DD4717291A15604D00C276D4 /* PTDBeanManager+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PTDBeanManager+Protected.h"; sourceTree = "<group>"; };
+		DD47172A1A15604D00C276D4 /* PTDBeanManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTDBeanManager.m; sourceTree = "<group>"; };
+		DD47172B1A15604D00C276D4 /* PTDBeanRadioConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTDBeanRadioConfig.m; sourceTree = "<group>"; };
+		DD47172D1A15604D00C276D4 /* PTDBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTDBean.h; sourceTree = "<group>"; };
+		DD47172E1A15604D00C276D4 /* PTDBeanManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTDBeanManager.h; sourceTree = "<group>"; };
+		DD47172F1A15604D00C276D4 /* PTDBeanRadioConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTDBeanRadioConfig.h; sourceTree = "<group>"; };
+		DD4717301A15604D00C276D4 /* PTDBleDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTDBleDevice.h; sourceTree = "<group>"; };
+		DD4717461A1560EB00C276D4 /* AppMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppMessages.h; sourceTree = "<group>"; };
+		DD4717471A1560EB00C276D4 /* AppMessageTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppMessageTypes.h; sourceTree = "<group>"; };
+		DD4717481A1566F000C276D4 /* BeanDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeanDetailViewController.h; sourceTree = "<group>"; };
+		DD4717491A1566F000C276D4 /* BeanDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeanDetailViewController.m; sourceTree = "<group>"; };
+		DD62F2961A1331870059F3DB /* Hackbright_Final_Project_iOS_current.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackbright_Final_Project_iOS_current.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD62F29A1A1331870059F3DB /* Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		DD62F29B1A1331870059F3DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DD62F29D1A1331870059F3DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DD62F29E1A1331870059F3DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DD62F2A01A1331870059F3DB /* NFHBeanListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NFHBeanListViewController.h; sourceTree = "<group>"; };
+		DD62F2A11A1331870059F3DB /* NFHBeanListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NFHBeanListViewController.m; sourceTree = "<group>"; };
+		DD62F2A41A1331870059F3DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DD62F2A61A1331870059F3DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DD62F2A91A1331870059F3DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DD8576421A13347B00FE4C37 /* Hackbright_Final_Project_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Hackbright_Final_Project_iOS.entitlements; sourceTree = "<group>"; };
+		DDE529BE1A21147600A902EC /* NFHWebServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NFHWebServiceManager.h; path = ../NFHWebServiceManager.h; sourceTree = "<group>"; };
+		DDE529BF1A21147600A902EC /* NFHWebServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NFHWebServiceManager.m; path = ../NFHWebServiceManager.m; sourceTree = "<group>"; };
+		DDE529C11A23FD5E00A902EC /* NFHLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFHLogInViewController.h; sourceTree = "<group>"; };
+		DDE529C21A23FD5E00A902EC /* NFHLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFHLogInViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD62F2931A1331870059F3DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD0AD8981A1A7DA500F60E4B /* CoreLocation.framework in Frameworks */,
+				DD0AD8961A1A7D9400F60E4B /* CoreBluetooth.framework in Frameworks */,
+				DD0AD8941A1A7D8300F60E4B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD4716F61A15604D00C276D4 /* BeanSDK */ = {
+			isa = PBXGroup;
+			children = (
+				DD4716F71A15604D00C276D4 /* AppMessages */,
+				DD4716FA1A15604D00C276D4 /* BEAN_Globals.h */,
+				DD4716FB1A15604D00C276D4 /* Categories */,
+				DD4717021A15604D00C276D4 /* Helper */,
+				DD4717071A15604D00C276D4 /* Profiles */,
+				DD4717271A15604D00C276D4 /* PTDBean+Protected.h */,
+				DD4717281A15604D00C276D4 /* PTDBean.m */,
+				DD4717291A15604D00C276D4 /* PTDBeanManager+Protected.h */,
+				DD47172A1A15604D00C276D4 /* PTDBeanManager.m */,
+				DD47172B1A15604D00C276D4 /* PTDBeanRadioConfig.m */,
+				DD47172C1A15604D00C276D4 /* Public */,
+			);
+			path = BeanSDK;
+			sourceTree = "<group>";
+		};
+		DD4716F71A15604D00C276D4 /* AppMessages */ = {
+			isa = PBXGroup;
+			children = (
+				DD4716F81A15604D00C276D4 /* AppMessagingLayer.h */,
+				DD4716F91A15604D00C276D4 /* AppMessagingLayer.m */,
+			);
+			path = AppMessages;
+			sourceTree = "<group>";
+		};
+		DD4716FB1A15604D00C276D4 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DD4716FC1A15604D00C276D4 /* CBPeripheral+isConnected_Universal.h */,
+				DD4716FD1A15604D00C276D4 /* CBPeripheral+isConnected_Universal.m */,
+				DD4716FE1A15604D00C276D4 /* CBPeripheral+UniqueId.h */,
+				DD4716FF1A15604D00C276D4 /* CBPeripheral+UniqueId.m */,
+				DD4717001A15604D00C276D4 /* NSData+CRC.h */,
+				DD4717011A15604D00C276D4 /* NSData+CRC.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		DD4717021A15604D00C276D4 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DD4717031A15604D00C276D4 /* BEAN_Helper.h */,
+				DD4717041A15604D00C276D4 /* BEAN_Helper.m */,
+				DD4717051A15604D00C276D4 /* PTDBEAN_Helper.h */,
+				DD4717061A15604D00C276D4 /* PTDBEAN_Helper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		DD4717071A15604D00C276D4 /* Profiles */ = {
+			isa = PBXGroup;
+			children = (
+				DD4717081A15604D00C276D4 /* Battery */,
+				DD47170B1A15604D00C276D4 /* BleProfile.h */,
+				DD47170C1A15604D00C276D4 /* BleProfile.m */,
+				DD47170D1A15604D00C276D4 /* Device Info */,
+				DD4717101A15604D00C276D4 /* Gatt Serial */,
+				DD4717201A15604D00C276D4 /* OAD */,
+				DD4717241A15604D00C276D4 /* Profile_Protocol.h */,
+				DD4717251A15604D00C276D4 /* ProfileDelegate_Protocol.h */,
+				DD4717261A15604D00C276D4 /* PTDBleDevice.m */,
+			);
+			path = Profiles;
+			sourceTree = "<group>";
+		};
+		DD4717081A15604D00C276D4 /* Battery */ = {
+			isa = PBXGroup;
+			children = (
+				DD4717091A15604D00C276D4 /* BatteryProfile.h */,
+				DD47170A1A15604D00C276D4 /* BatteryProfile.m */,
+			);
+			path = Battery;
+			sourceTree = "<group>";
+		};
+		DD47170D1A15604D00C276D4 /* Device Info */ = {
+			isa = PBXGroup;
+			children = (
+				DD47170E1A15604D00C276D4 /* DevInfoProfile.h */,
+				DD47170F1A15604D00C276D4 /* DevInfoProfile.m */,
+			);
+			path = "Device Info";
+			sourceTree = "<group>";
+		};
+		DD4717101A15604D00C276D4 /* Gatt Serial */ = {
+			isa = PBXGroup;
+			children = (
+				DD4717111A15604D00C276D4 /* GattSerialProfile.h */,
+				DD4717121A15604D00C276D4 /* GattSerialProfile.m */,
+				DD4717131A15604D00C276D4 /* Transport */,
+			);
+			path = "Gatt Serial";
+			sourceTree = "<group>";
+		};
+		DD4717131A15604D00C276D4 /* Transport */ = {
+			isa = PBXGroup;
+			children = (
+				DD4717141A15604D00C276D4 /* GattCharacteristicHandler.h */,
+				DD4717151A15604D00C276D4 /* GattCharacteristicObserver.h */,
+				DD4717161A15604D00C276D4 /* GattPacket.h */,
+				DD4717171A15604D00C276D4 /* GattPacket.m */,
+				DD4717181A15604D00C276D4 /* GattSerialMessage.h */,
+				DD4717191A15604D00C276D4 /* GattSerialMessage.m */,
+				DD47171A1A15604D00C276D4 /* GattSerialMessageRxAssembler.h */,
+				DD47171B1A15604D00C276D4 /* GattSerialMessageRxAssembler.m */,
+				DD47171C1A15604D00C276D4 /* GattSerialTransport.h */,
+				DD47171D1A15604D00C276D4 /* GattSerialTransport.m */,
+				DD47171E1A15604D00C276D4 /* GattTransport.h */,
+				DD47171F1A15604D00C276D4 /* GattTransport.m */,
+			);
+			path = Transport;
+			sourceTree = "<group>";
+		};
+		DD4717201A15604D00C276D4 /* OAD */ = {
+			isa = PBXGroup;
+			children = (
+				DD4717211A15604D00C276D4 /* oad.h */,
+				DD4717221A15604D00C276D4 /* OadProfile.h */,
+				DD4717231A15604D00C276D4 /* OadProfile.m */,
+			);
+			path = OAD;
+			sourceTree = "<group>";
+		};
+		DD47172C1A15604D00C276D4 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				DD47172D1A15604D00C276D4 /* PTDBean.h */,
+				DD47172E1A15604D00C276D4 /* PTDBeanManager.h */,
+				DD47172F1A15604D00C276D4 /* PTDBeanRadioConfig.h */,
+				DD4717301A15604D00C276D4 /* PTDBleDevice.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		DD4717451A1560EB00C276D4 /* App Message Definitions */ = {
+			isa = PBXGroup;
+			children = (
+				DD4717461A1560EB00C276D4 /* AppMessages.h */,
+				DD4717471A1560EB00C276D4 /* AppMessageTypes.h */,
+			);
+			path = "App Message Definitions";
+			sourceTree = "<group>";
+		};
+		DD62F28D1A1331870059F3DB = {
+			isa = PBXGroup;
+			children = (
+				DD0AD8971A1A7DA500F60E4B /* CoreLocation.framework */,
+				DD0AD8951A1A7D9400F60E4B /* CoreBluetooth.framework */,
+				DD0AD8931A1A7D8300F60E4B /* Foundation.framework */,
+				DD62F2981A1331870059F3DB /* Hackbright_Final_Project_iOS */,
+				DD62F2971A1331870059F3DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD62F2971A1331870059F3DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD62F2961A1331870059F3DB /* Hackbright_Final_Project_iOS_current.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD62F2981A1331870059F3DB /* Hackbright_Final_Project_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DD8576421A13347B00FE4C37 /* Hackbright_Final_Project_iOS.entitlements */,
+				DD4717451A1560EB00C276D4 /* App Message Definitions */,
+				DD4716F61A15604D00C276D4 /* BeanSDK */,
+				DD62F29D1A1331870059F3DB /* AppDelegate.h */,
+				DD62F29E1A1331870059F3DB /* AppDelegate.m */,
+				DD4716F31A15600000C276D4 /* NFHLocationManager.h */,
+				DD4716F41A15600000C276D4 /* NFHLocationManager.m */,
+				DD4717481A1566F000C276D4 /* BeanDetailViewController.h */,
+				DD4717491A1566F000C276D4 /* BeanDetailViewController.m */,
+				DD62F2A01A1331870059F3DB /* NFHBeanListViewController.h */,
+				DD62F2A11A1331870059F3DB /* NFHBeanListViewController.m */,
+				DD62F2A31A1331870059F3DB /* Main.storyboard */,
+				DDE529BE1A21147600A902EC /* NFHWebServiceManager.h */,
+				DDE529BF1A21147600A902EC /* NFHWebServiceManager.m */,
+				DDE529C11A23FD5E00A902EC /* NFHLogInViewController.h */,
+				DDE529C21A23FD5E00A902EC /* NFHLogInViewController.m */,
+				DD62F2A61A1331870059F3DB /* Images.xcassets */,
+				DD62F2A81A1331870059F3DB /* LaunchScreen.xib */,
+				DD62F2991A1331870059F3DB /* Supporting Files */,
+			);
+			path = Hackbright_Final_Project_iOS;
+			sourceTree = "<group>";
+		};
+		DD62F2991A1331870059F3DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD62F29A1A1331870059F3DB /* Info.plist */,
+				DD62F29B1A1331870059F3DB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD62F2951A1331870059F3DB /* Hackbright_Final_Project_iOS_current */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD62F2B91A1331870059F3DB /* Build configuration list for PBXNativeTarget "Hackbright_Final_Project_iOS_current" */;
+			buildPhases = (
+				DD62F2921A1331870059F3DB /* Sources */,
+				DD62F2931A1331870059F3DB /* Frameworks */,
+				DD62F2941A1331870059F3DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hackbright_Final_Project_iOS_current;
+			productName = Hackbright_Final_Project_iOS;
+			productReference = DD62F2961A1331870059F3DB /* Hackbright_Final_Project_iOS_current.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD62F28E1A1331870059F3DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "nadine farah";
+				TargetAttributes = {
+					DD62F2951A1331870059F3DB = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 37LV2U5VY2;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = DD62F2911A1331870059F3DB /* Build configuration list for PBXProject "Hackbright_Final_Project_iOS_current" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD62F28D1A1331870059F3DB;
+			productRefGroup = DD62F2971A1331870059F3DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD62F2951A1331870059F3DB /* Hackbright_Final_Project_iOS_current */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD62F2941A1331870059F3DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD62F2A51A1331870059F3DB /* Main.storyboard in Resources */,
+				DD62F2AA1A1331870059F3DB /* LaunchScreen.xib in Resources */,
+				DD62F2A71A1331870059F3DB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD62F2921A1331870059F3DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD4717331A15604D00C276D4 /* CBPeripheral+UniqueId.m in Sources */,
+				DD47173E1A15604D00C276D4 /* GattSerialTransport.m in Sources */,
+				DD4717411A15604D00C276D4 /* PTDBleDevice.m in Sources */,
+				DD8576A11A155E9B00FE4C37 /* AppDelegate.m in Sources */,
+				DD47174A1A1566F000C276D4 /* BeanDetailViewController.m in Sources */,
+				DD8576A21A155E9B00FE4C37 /* NFHBeanListViewController.m in Sources */,
+				DD47173C1A15604D00C276D4 /* GattSerialMessage.m in Sources */,
+				DD4717381A15604D00C276D4 /* BleProfile.m in Sources */,
+				DD47173F1A15604D00C276D4 /* GattTransport.m in Sources */,
+				DD4717421A15604D00C276D4 /* PTDBean.m in Sources */,
+				DD4717391A15604D00C276D4 /* DevInfoProfile.m in Sources */,
+				DD4717441A15604D00C276D4 /* PTDBeanRadioConfig.m in Sources */,
+				DD4717321A15604D00C276D4 /* CBPeripheral+isConnected_Universal.m in Sources */,
+				DD47173B1A15604D00C276D4 /* GattPacket.m in Sources */,
+				DD4717311A15604D00C276D4 /* AppMessagingLayer.m in Sources */,
+				DD4717371A15604D00C276D4 /* BatteryProfile.m in Sources */,
+				DD4717341A15604D00C276D4 /* NSData+CRC.m in Sources */,
+				DD4717361A15604D00C276D4 /* PTDBEAN_Helper.m in Sources */,
+				DD4716F51A15600000C276D4 /* NFHLocationManager.m in Sources */,
+				DD47173D1A15604D00C276D4 /* GattSerialMessageRxAssembler.m in Sources */,
+				DD4717401A15604D00C276D4 /* OadProfile.m in Sources */,
+				DDE529C31A23FD5E00A902EC /* NFHLogInViewController.m in Sources */,
+				DDE529C01A21147600A902EC /* NFHWebServiceManager.m in Sources */,
+				DD8576B71A155E9B00FE4C37 /* main.m in Sources */,
+				DD4717431A15604D00C276D4 /* PTDBeanManager.m in Sources */,
+				DD4717351A15604D00C276D4 /* BEAN_Helper.m in Sources */,
+				DD47173A1A15604D00C276D4 /* GattSerialProfile.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DD62F2A31A1331870059F3DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD62F2A41A1331870059F3DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DD62F2A81A1331870059F3DB /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD62F2A91A1331870059F3DB /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD62F2B71A1331870059F3DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DD62F2B81A1331870059F3DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD62F2BA1A1331870059F3DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Hackbright_Final_Project_iOS/Hackbright_Final_Project_iOS.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Hackbright_Final_Project_iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = Hackbright_Final_Project_iOS_current;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		DD62F2BB1A1331870059F3DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Hackbright_Final_Project_iOS/Hackbright_Final_Project_iOS.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Hackbright_Final_Project_iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = Hackbright_Final_Project_iOS_current;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD62F2911A1331870059F3DB /* Build configuration list for PBXProject "Hackbright_Final_Project_iOS_current" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD62F2B71A1331870059F3DB /* Debug */,
+				DD62F2B81A1331870059F3DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD62F2B91A1331870059F3DB /* Build configuration list for PBXNativeTarget "Hackbright_Final_Project_iOS_current" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD62F2BA1A1331870059F3DB /* Debug */,
+				DD62F2BB1A1331870059F3DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD62F28E1A1331870059F3DB /* Project object */;
+}

@@ -1,0 +1,10 @@
+.DS_Store
+/env/
+*.pyc
+questions_monday
+assim.coordinates.py
+notes_for_map_mm
+app/flask_notes
+temp.db
+notes2
+notes2

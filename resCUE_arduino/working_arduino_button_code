@@ -1,0 +1,70 @@
+const int buttonPin = 4;
+const int longPressThreshold = 2500;
+
+int lastButtonState = LOW; 
+int buttonState = LOW; 
+int buttonEvent;
+
+long lastDebounceTime = 0;
+long debounceDelay = 50;
+long lastButtonDownTime = 0;
+
+enum {no_press, short_press, long_press};
+
+void setup()
+{
+	pinMode(buttonPin, INPUT);
+	Serial.begin(9600);
+}
+
+void loop()
+{
+  int reading = digitalRead(buttonPin);
+  if (reading != lastButtonState)
+  {
+    lastDebounceTime = millis();  //start counting
+  }
+            
+  if ((millis() - lastDebounceTime) > debounceDelay)
+  {
+    if (reading != buttonState)
+    {
+      buttonState = reading;
+      
+      if(buttonState == HIGH)
+      {
+        Serial.print("down ");
+        lastButtonDownTime = millis();      
+      }
+      else
+      {
+        Serial.print("up ");
+        long pressDuration = millis() - lastButtonDownTime;
+        if (pressDuration > longPressThreshold)
+        {
+	  buttonEvent = long_press;
+      	}
+      	else 
+      	{
+          buttonEvent = short_press;
+      	}
+      }
+              
+      buttonState = reading;
+    }
+  }
+
+  switch (buttonEvent)
+  {
+    case long_press:
+      Serial.print("L");
+      break;
+
+    case short_press:
+      Serial.print("S");
+      break;
+  }
+  
+  lastButtonState = reading;
+  buttonEvent = no_press;
+}
